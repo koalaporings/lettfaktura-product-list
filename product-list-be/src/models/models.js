@@ -14,7 +14,7 @@ const Product = sequelize.define("Product", {
 
     price: {
         type: DataTypes.INTEGER,
-        allowNull: falsew
+        allowNull: false
     },
 
     unit: {

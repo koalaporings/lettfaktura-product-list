@@ -1,8 +1,7 @@
 import Fastify from 'fastify';
 import sequelize from './db.js';
 import cors from "@fastify/cors";
-
-import textController from './api/api.js';
+import productController from './api/api.js';
 
 
 const fastify = Fastify({
@@ -15,7 +14,7 @@ await fastify.register(cors, {
     allowedHeaders: ["Content-Type", "Authorization"],
 });
 
-fastify.register(textController, { prefix: '/text' })
+fastify.register(productController, { prefix: '/products' })
 
 sequelize
     .authenticate()

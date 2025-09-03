@@ -1,5 +1,6 @@
 .table-wrapper {
     overflow-x: auto;
+    overflow-y: auto;
     margin-top: 20px;
 }
 
@@ -19,6 +20,10 @@
 
 .custom-table th {
     font-weight: bold;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 2;
 }
 
 .custom-table tr:hover {

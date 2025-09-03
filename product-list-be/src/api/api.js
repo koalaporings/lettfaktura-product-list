@@ -1,4 +1,4 @@
-import Text from '../models/models.js'
+import Product from '../models/models.js'
 
 const responseTextSchema = {
     response: {
@@ -7,13 +7,13 @@ const responseTextSchema = {
         items: {
             type: "object",
             properties: {
-            id: { type: "integer" },
-            name: { type: "string" },
-            in_price: { type: "integer" },
-            price: { type: "integer" },
-            unit: { type: "string" },
-            stock: { type: "integer" },
-            description: { type: "string" }
+                id: { type: "integer" },
+                name: { type: "string" },
+                in_price: { type: "integer" },
+                price: { type: "integer" },
+                unit: { type: "string" },
+                stock: { type: "integer" },
+                description: { type: "string" }
             }
         }
         }

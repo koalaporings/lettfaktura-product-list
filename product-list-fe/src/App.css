@@ -35,13 +35,20 @@ body {
 }
 
 .content-container {
-    position: relative;
-    margin-left: 275px;
+    position: fixed; 
+    top: 100px;       
+    left: 280px;     
+    right: 0;
+    bottom: 0;
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    background: #fff;
 }
 
 .header-container {
-    position: inherit;
+    position: relative;
     height: auto;
     display: flex;
     justify-content: space-between;
