@@ -13,7 +13,7 @@
 
 .search-input {
     width: 100%;
-    padding: 10px 48px 10px 12px;
+    padding: 5px 48px 5px 12px;
     font-size: 16px;
     background-color: white;
     border: 1px solid #ccc;
@@ -24,17 +24,25 @@
 .search-button {
     position: absolute;
     top: 50%;
-    right: 8px;
+    right: 4px;
     transform: translateY(-50%);
     background-color: #ffffff;
     color: white;
     border: none;
-    padding: 6px 12px;
+    padding: 2px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
+
+    i {
+        font-size: large;
+        color: black;
+    }
 }
 
 .search-button:hover {
     background-color: #0056b3;
+
+    i {
+        color: white;
+    }
 }
