@@ -11,7 +11,7 @@ const fastify = Fastify({
 await fastify.register(cors, {
     origin: [
         "http://localhost:5173",
-        "https://lettfaktura-product-list.vercel.app/"
+        "https://lettfaktura-product-list.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -29,7 +29,7 @@ sequelize
     });
 
 try {
-    fastify.listen({ port: process.env.PORT || 4000, host: "0.0.0.0" });
+    await fastify.listen({ port: process.env.PORT || 4000, host: "0.0.0.0" });
 } catch (error) {
     fastify.log.error(error);
     process.exit(1);
