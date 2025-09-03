@@ -11,10 +11,11 @@ const fastify = Fastify({
 await fastify.register(cors, {
     origin: [
         "http://localhost:5173",
-        "https://lettfaktura-product-list.vercel.app"
+        "https://lettfaktura-product-list.vercel.app/"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
 });
 
 fastify.register(productController, { prefix: '/products' })
