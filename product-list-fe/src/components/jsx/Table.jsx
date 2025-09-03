@@ -7,10 +7,13 @@ const Table = ({ data }) => {
             <table className="custom-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
+                        <th>Article No.</th>
+                        <th>Product/Service</th>
+                        <th>In Price</th>
+                        <th>Price</th>
+                        <th>Unit</th>
+                        <th>In Stock</th>
+                        <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>

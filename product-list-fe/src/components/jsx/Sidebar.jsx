@@ -21,6 +21,7 @@ function Sidebar() {
         <>
             <div>
                 <h2> Menu </h2>
+                <hr/>
                 <ul>
                     {menuItems.map(item => (
                         <li key={item.id}>
