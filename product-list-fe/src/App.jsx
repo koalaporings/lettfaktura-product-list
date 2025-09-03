@@ -23,9 +23,18 @@ function App() {
                             <SearchBar/>
                         </div>
                         <div className='button-container'>
-                            <button>Add Product</button>
-                            <button>Remove Product</button>
-                            <button>Export</button>
+                            <button>
+                                New Product
+                                <i className='mdi mdi-plus-circle-outline'/>
+                            </button>
+                            <button>
+                                Print List
+                                <i className='mdi mdi-printer-outline'/>
+                            </button>
+                            <button>
+                                Advanced mode
+                                <i className='mdi mdi-tune-vertical'/>
+                            </button>
                         </div>
                     </div>
                     <Table/>
