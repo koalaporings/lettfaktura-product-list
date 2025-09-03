@@ -1,9 +1,16 @@
+import { useState } from "react";
 import "../css/Navbar.css";
 import enFlag from "../../assets/uk.png";
 
 function Navbar() {
+
     return (
         <>
+            <button 
+                className="hamburger" 
+            >
+                <i className="mdi mdi-menu" />
+            </button>
             <div className="profile-container">
                 <i className="mdi mdi-account-circle" />
                 <div className="profile-info">

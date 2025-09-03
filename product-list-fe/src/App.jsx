@@ -24,15 +24,15 @@ function App() {
                         </div>
                         <div className='button-container'>
                             <button>
-                                New Product
+                                <p>New Product</p>
                                 <i className='mdi mdi-plus-circle-outline'/>
                             </button>
                             <button>
-                                Print List
+                                <p>Print List</p>
                                 <i className='mdi mdi-printer-outline'/>
                             </button>
                             <button>
-                                Advanced mode
+                                <p>Advanced mode</p>
                                 <i className='mdi mdi-tune-vertical'/>
                             </button>
                         </div>

@@ -46,3 +46,10 @@
         color: white;
     }
 }
+
+@media (max-width: 767px) {
+    .search-bar {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
