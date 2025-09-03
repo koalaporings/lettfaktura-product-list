@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getProducts } from '../../store/api';
 import '../css/Table.css';
 
-const Table = ({ data }) => {
+const Table = () => {
 
     const [products, setProducts] = useState([]);
 

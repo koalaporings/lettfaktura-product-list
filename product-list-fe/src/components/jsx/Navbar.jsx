@@ -1,4 +1,5 @@
 import "../css/Navbar.css";
+import enFlag from "../../assets/uk.png";
 
 function Navbar() {
     return (
@@ -12,7 +13,7 @@ function Navbar() {
             </div>
             <div className="language-container">
                 <p>English</p>
-                <img className="profile-image" src="src/assets/uk.png"/>
+                <img className="profile-image" src={enFlag}/>
             </div>
         </>
     );
