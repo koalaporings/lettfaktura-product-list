@@ -17,8 +17,8 @@ const Table = () => {
             <table className="custom-table">
                 <thead>
                     <tr>
-                        <th>Article No.</th>
-                        <th>Product/Service</th>
+                        <th>Article No. <span style={{color: "#2196F3"}}>↓</span></th>
+                        <th>Product/Service <span style={{color: "#4CAF50"}}>↓</span></th>
                         <th>In Price</th>
                         <th>Price</th>
                         <th>Unit</th>
@@ -30,13 +30,13 @@ const Table = () => {
                     {products && products.length > 0 ? (
                         products.map((item) => (
                             <tr key={item.id}>
-                                <td>{item.id}</td>
-                                <td>{item.name}</td>
-                                <td>{item.in_price}</td>
-                                <td>{item.price}</td>
-                                <td>{item.unit}</td>
-                                <td>{item.stock}</td>
-                                <td>{item.description}</td>
+                                <td><span className="td-pill">{item.id}</span></td>
+                                <td><span className="td-pill">{item.name}</span></td>
+                                <td><span className="td-pill">{item.in_price}</span></td>
+                                <td><span className="td-pill">{item.price}</span></td>
+                                <td><span className="td-pill">{item.unit}</span></td>
+                                <td><span className="td-pill">{item.stock}</span></td>
+                                <td><span className="td-pill">{item.description}</span></td>
                             </tr>
                         ))
                     ) : (

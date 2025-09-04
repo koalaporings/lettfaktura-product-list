@@ -25,15 +25,15 @@ function App() {
                         <div className='button-container'>
                             <button>
                                 <p>New Product</p>
-                                <i className='mdi mdi-plus-circle-outline'/>
+                                <i className='mdi mdi-plus-circle-outline' style={{ color: "#4CAF50"}}/>
                             </button>
                             <button>
                                 <p>Print List</p>
-                                <i className='mdi mdi-printer-outline'/>
+                                <i className='mdi mdi-printer-outline' style={{ color: "#2196F3"}}/>
                             </button>
                             <button>
                                 <p>Advanced mode</p>
-                                <i className='mdi mdi-tune-vertical'/>
+                                <i className='mdi mdi-tune-vertical' style={{ color: "#2196F3"}}/>
                             </button>
                         </div>
                     </div>

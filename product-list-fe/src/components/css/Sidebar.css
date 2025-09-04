@@ -8,8 +8,17 @@
     }
 }
 
-h2 {
+.header-text {
     text-align: center;
+    font-size: x-large;
+    margin-bottom: 8px;
+}
+
+hr {
+    width: 60%;
+    border-top: 1px solid #2196F3;
+    margin-top: 0;
+    
 }
 
 .menu-items {
