@@ -1,10 +1,35 @@
-import { useState, useEffect } from 'react';
-import { getProducts } from '../../store/api';
+import { useState, useEffect, Suspense } from 'react';
+import { getProducts, updateProduct } from '../../store/api';
+import EditModal from './EditModal';
 import '../css/Table.css';
 
 const Table = () => {
 
     const [products, setProducts] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState({});
+    const [isOpenModal, setOpenModal] = useState(false);
+
+    const handleEdit = (item) => {
+        setOpenModal(true);
+        setSelectedProduct(item);
+    }
+
+    const onSave = async (updatedProduct) => {
+        try {
+            const res = await updateProduct(updatedProduct.id, updatedProduct);
+            if (res.status === 200){
+                setProducts(prevProducts =>
+                    prevProducts.map(p =>
+                        p.id === updatedProduct.id ? updatedProduct : p
+                    )
+                );
+            }
+            setOpenModal(false);
+        } catch (error) {
+            console.error('Failed to update product:', error);
+            alert('Failed to save changes.');
+        }
+    };
 
     useEffect(() => {
         getProducts()
@@ -37,6 +62,11 @@ const Table = () => {
                                 <td><span className="td-pill">{item.unit}</span></td>
                                 <td><span className="td-pill">{item.stock}</span></td>
                                 <td><span className="td-pill">{item.description}</span></td>
+                                <td>
+                                    <button className="td-pill" onClick={() => handleEdit(item)}>
+                                        <i className="mdi mdi-dots-horizontal"/>
+                                    </button>
+                                </td>
                             </tr>
                         ))
                     ) : (
@@ -48,6 +78,16 @@ const Table = () => {
                     )}
                 </tbody>
             </table>
+            <Suspense fallback="Loading">
+                {isOpenModal && (
+                    <EditModal
+                        isOpen={isOpenModal}
+                        onClose={() => setOpenModal(false)}
+                        product={selectedProduct}
+                        onSave={onSave}
+                    />
+                )}
+            </Suspense>
         </div>
     );
 };

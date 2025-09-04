@@ -51,6 +51,15 @@
     background-color: #f9f9f9;
 }
 
+.custom-table tr td .td-pill {
+    justify-content: center;
+    align-content: center;
+
+    i {
+        margin-right: 0;
+    }
+}
+
 @media (max-width: 1200px) {
     .custom-table th span {
         display: none;
