@@ -49,6 +49,7 @@ const Table = () => {
                         <th>Unit</th>
                         <th>In Stock</th>
                         <th>Description</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
