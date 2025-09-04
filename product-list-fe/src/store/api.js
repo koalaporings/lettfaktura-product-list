@@ -9,6 +9,9 @@ const api = axios.create({
 
 
 export const getProducts = () =>
-  api.get(`/products/`);
+  api.get("/products/");
+
+export const updateProduct = (id, data) =>
+  api.put(`/products/${id}`, data);
 
 export default api;

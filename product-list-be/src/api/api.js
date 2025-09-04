@@ -25,6 +25,25 @@ const textController = (fastify, options, done) => {
         return await Product.findAll();
     });
 
+    fastify.put('/:id', async (request, reply) => {
+        const { id } = request.params;
+        const updates = request.body;
+
+        try {
+            const product = await Product.findByPk(id);
+            if (!product) {
+                return reply.status(404).send({ error: 'Product not found' });
+            }
+
+            await product.update(updates);
+
+            return reply.send(product);
+        } catch (error) {
+            console.error(error);
+            return reply.status(500).send({ error: 'Failed to update product' });
+        }
+    });
+
     done();
 };
 
