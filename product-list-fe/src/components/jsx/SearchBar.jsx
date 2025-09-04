@@ -1,6 +1,6 @@
 import '../css/SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = ({ placeholder }) => {
 
     return (
         <form className="search-bar">
@@ -8,7 +8,7 @@ const SearchBar = () => {
                 <input
                     type="text"
                     className="search-input"
-                    placeholder="Search..."
+                    placeholder={placeholder}
                 />
                 <button type="submit" className="search-button">
                     <i className="mdi mdi-magnify" />

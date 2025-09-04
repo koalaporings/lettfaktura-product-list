@@ -19,8 +19,8 @@ function App() {
                 <div className='content-container'>
                     <div className='header-container'>
                         <div className='searchbar-container'>
-                            <SearchBar/>
-                            <SearchBar/>
+                            <SearchBar placeholder="Search Article No..."/>
+                            <SearchBar placeholder="Search Product..."/>
                         </div>
                         <div className='button-container'>
                             <button>
