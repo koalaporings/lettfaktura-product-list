@@ -22,7 +22,9 @@ const responseTextSchema = {
 
 const textController = (fastify, options, done) => {
     fastify.get('/', { schema: responseTextSchema }, async (req, reply) => {
-        return await Product.findAll();
+        return await Product.findAll({
+            order: [['id', 'ASC']]
+        });
     });
 
     fastify.put('/:id', async (request, reply) => {
